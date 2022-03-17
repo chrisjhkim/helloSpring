@@ -29,6 +29,4 @@
 		<!-- <context:exclude-filter type="annotation" expression="com.chrisjhkim.hellospring.config.spring.ExternalService" />	   -->
 	</context:component-scan>
 
-
-
 </beans:beans>
