@@ -1,4 +1,4 @@
-package com.chrisjhkim.hellospring;
+package com.chrisjhkim.hellospring.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
