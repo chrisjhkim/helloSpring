@@ -17,6 +17,6 @@ public class StudyController {
 	 * 생성자는 하나의 생성자에만 사용 가능 
 	 * 
 	 */
-	@Autowired 
-	private StudyService studyService;
+//	@Autowired 
+//	private StudyService studyService;
 }

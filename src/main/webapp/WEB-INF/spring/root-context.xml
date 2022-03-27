@@ -4,5 +4,25 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+
 		
+		
+	<bean id="firstQService" class="com.chrisjhkim.hellospring.service.impl.FirstQualifierServiceImpl">
+		<qualifier value="mainQService"></qualifier>
+	</bean>
+	<bean id="secondQService" class="com.chrisjhkim.hellospring.service.impl.SecondQualifierServiceImpl">
+	</bean>
+	
+	<bean id="propertyTestWithXmlService" class="com.chrisjhkim.hellospring.study.service.impl.PropertyTestWithXmlServiceImpl" >
+		<property name="paramWithPublicSetter" value="root-context.xml에서 세팅한값"></property>
+		<!-- PropertyTestServiceImpl 테스트
+		<property name="privateParamWithoutSetter" value="ccccc"></property>
+		<property name="publicParamWithoutSetter" value="ddddd"></property>
+		<property name="paramWithPrivateSetter" value="bbbbb"></property>
+		 -->
+	</bean>
+	
+	
+	
+	
 </beans>

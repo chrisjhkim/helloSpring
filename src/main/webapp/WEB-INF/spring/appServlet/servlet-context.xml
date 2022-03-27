@@ -6,6 +6,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<!-- 
+	PropertySourcesPlaceholderConfigurer  가 ${...} 를 속성에서 불러와주는 기능을 활성화 시킨다. 
+	file-encoding 속성 가능 
+	-->
+	<context:property-placeholder location="classpath:database.properties" />
+	
+
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 
@@ -31,5 +40,6 @@
 	
 	<!-- context:annotation-config는 빈을 등록해주지는 않고 이미 등록된 빈의 메타정보에 프로퍼티 항목을 추가해주는 작업을 한다. -->
 	<context:annotation-config />
+
 
 </beans:beans>
