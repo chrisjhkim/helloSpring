@@ -60,7 +60,7 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
-
+		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 
@@ -72,7 +72,12 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 
 		model.addAttribute("serverTime", formattedDate);
-
+		logger.info(" listen to - scars to your beautiful");
+		
+		/*
+		 * org.springframework.web.servlet.view.InternalResourceViewResolver ¿¡ ÀÇÇØ home.jsp return 
+		 * 
+		 */
 		return "home";
 	}
 

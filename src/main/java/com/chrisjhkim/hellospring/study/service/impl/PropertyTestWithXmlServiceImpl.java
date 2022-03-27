@@ -1,5 +1,9 @@
 package com.chrisjhkim.hellospring.study.service.impl;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +15,15 @@ public class PropertyTestWithXmlServiceImpl implements PropertyTestWithXmlServic
 	private static final Logger logger = LoggerFactory.getLogger(PropertyTestWithXmlServiceImpl.class);
 	// default 값 설정 가능하다. 물론 xml에서 property setting 하면 달라짐
 	private String paramWithPublicSetter = "default값";
+	
+	private boolean paramBoolean;
+	private int[] paramIntArray;
+	
+	private List<String> paramList;
+	private Map<String,String> paramMap;
+	private Properties paramProperties;
+	
+	
 //	private String paramWithPrivateSetter;
 	
 	/*
@@ -28,6 +41,14 @@ public class PropertyTestWithXmlServiceImpl implements PropertyTestWithXmlServic
 //		logger.info("privateParamWithoutSetter value = {}", this.privateParamWithoutSetter);
 //		logger.info("publicParamWithoutSetter value = {}", this.publicParamWithoutSetter);
 		
+		logger.info("paramBoolean value={}", this.paramBoolean);
+		logger.info("paramIntArray value={}", this.paramIntArray);
+
+		logger.info("paramList value={}", this.paramList);
+		logger.info("paramMap value={}", this.paramMap);
+		logger.info("paramProperties value={}", this.paramProperties);
+		
+		
 	}
 	public void setParamWithPublicSetter(String paramWithPublicSetter) {
 		this.paramWithPublicSetter = paramWithPublicSetter;
@@ -35,6 +56,21 @@ public class PropertyTestWithXmlServiceImpl implements PropertyTestWithXmlServic
 //	private void setParamWithPrivateSetter(String paramWithPrivateSetter) {
 //		this.paramWithPrivateSetter = paramWithPrivateSetter;
 //	}
+	public void setParamBoolean(boolean paramBoolean) {
+		this.paramBoolean = paramBoolean;
+	}
+	public void setParamIntArray(int[] paramIntArray) {
+		this.paramIntArray = paramIntArray;
+	}
+	public void setParamList(List<String> paramList) {
+		this.paramList = paramList;
+	}
+	public void setParamMap(Map<String, String> paramMap) {
+		this.paramMap = paramMap;
+	}
+	public void setParamProperties(Properties paramProperties) {
+		this.paramProperties = paramProperties;
+	}
 	
 	
 	

@@ -4,7 +4,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-
+	
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://locahost:3306/testdb" />
+		<property name="username" value="chris1108" />
+		<property name="password" value="1q2w3e4r" />
+		
+	</bean>
 		
 		
 	<bean id="firstQService" class="com.chrisjhkim.hellospring.service.impl.FirstQualifierServiceImpl">
@@ -20,6 +28,34 @@
 		<property name="publicParamWithoutSetter" value="ddddd"></property>
 		<property name="paramWithPrivateSetter" value="bbbbb"></property>
 		 -->
+		 <property name="paramBoolean" value="true"></property>
+		 <property name="paramIntArray" value="1,2,3"></property>
+		 <property name="paramList">
+		 	<list>
+		 		<value>listValue1</value>
+		 		<value>listValue2</value>
+		 		<value>listValue3</value>
+		 	</list>
+		 </property>
+		 
+		 <property name="paramMap">
+		 	<map>
+		 		<entry key="mapKey1" value="mapValue1" />
+		 		<entry key="mapKey2" value="mapValue2" />
+		 		<entry key="mapKey3" value="mapValue3" />
+		 	</map>
+		 </property>
+		 
+		 
+		 <property name="paramProperties">
+		 	<props>
+		 		<prop key="propKey1">propValue1</prop>
+		 		<prop key="propKey2">propValue2</prop>
+		 		<prop key="propKey3">propValue3</prop>
+		 	</props>
+		 </property>
+		 
+		 
 	</bean>
 	
 	
