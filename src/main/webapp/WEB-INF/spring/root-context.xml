@@ -11,15 +11,13 @@
 		<property name="url" value="jdbc:mysql://locahost:3306/testdb" />
 		<property name="username" value="chris1108" />
 		<property name="password" value="1q2w3e4r" />
-		
 	</bean>
 		
 		
 	<bean id="firstQService" class="com.chrisjhkim.hellospring.service.impl.FirstQualifierServiceImpl">
 		<qualifier value="mainQService"></qualifier>
 	</bean>
-	<bean id="secondQService" class="com.chrisjhkim.hellospring.service.impl.SecondQualifierServiceImpl">
-	</bean>
+	<bean id="secondQService" class="com.chrisjhkim.hellospring.service.impl.SecondQualifierServiceImpl" />
 	
 	<bean id="propertyTestWithXmlService" class="com.chrisjhkim.hellospring.study.service.impl.PropertyTestWithXmlServiceImpl" >
 		<property name="paramWithPublicSetter" value="root-context.xml에서 세팅한값"></property>
@@ -59,6 +57,9 @@
 	</bean>
 	
 	
-	
+	<bean id="serviceRequestFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+		<property name="targetBeanName" value="serviceRequest"></property>
+	</bean>
+		
 	
 </beans>
